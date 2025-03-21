@@ -1,5 +1,5 @@
 import { Webhook } from "svix";
-import User from "@/models/user";
+import User from "@/models/User";
 import connectDB from "@/config/db";
 import { NextRequest } from "next/server";
 import { headers } from "next/headers";
@@ -47,6 +47,6 @@ export async function POST(req) {
             break;
     }
 
-return NextRequest.json({message: "Event received"})
+return NextRequest.json({message: "Event received"});
 
 }
