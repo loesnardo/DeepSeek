@@ -6,7 +6,7 @@ export default async function connectDB() {
     if (cached.conn) return cached.conn;
     if (!cached.promise) {
         cached.promise = (await mongoose.connect(process.env.MONGODB_URI)).
-            then((mongoose) => mongoose);
+            then((mongoose)=>mongoose);
     }
     try {
         cached.conn = await cached.promise;
